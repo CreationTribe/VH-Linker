@@ -40,7 +40,7 @@
         $serverNames = GetVHServerName($apache2conf,80);
         // echo each server name into an anchor tag
         foreach($serverNames as $srvname){
-          echo "<a href=\"http://$srvname\" target=\"_BLANK\">$srvname</a><br>";
+          if($srvname != 'localhost') echo "<a href=\"http://$srvname\" target=\"_BLANK\">$srvname</a><br>";
         }
       ?>
     </nav>
